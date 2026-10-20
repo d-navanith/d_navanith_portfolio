@@ -9,6 +9,9 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
+# Documentation & knowledge logs
+docs/
+
 # Python bytecode & temporary files
 __pycache__/
 *.py[cod]

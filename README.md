@@ -31,7 +31,6 @@ d:\portfolio_design/
 ├── style.css        # Minimalist editorial CSS styles
 ├── app.js           # Client-side interactions & case study modal
 ├── assets/          # High-resolution logos, avatars, mockups & cutouts
-├── docs/            # Architecture blueprints & knowledge records
 └── references/      # Original PDF wireframes and asset references
 ```
 
