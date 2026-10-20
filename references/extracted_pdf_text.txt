@@ -1,0 +1,270 @@
+=== original_portfolio_wireframe_1.pdf ===
+--- Page 1 (Rect(0.0, 0.0, 1440.0, 6327.0)) ---
+Dinitha Navanith
+From pixels to products...
+Home
+About
+Work
+Contact
+Resume
+Let's talk
+ABOUT
+I design with curiosity.
+I build with purpose.
+Iˇm Dinitha Navanith, a UI/UX 
+designer and developer who 
+enjoys turning complex ideas 
+into simple, useful digital 
+experiences.
+My work sits between design 
+and technology  exploring 
+how thoughtful interfaces 
+and well-built products can 
+work together.
+2+ YOE
+linkedin.com/in/dnavanith
+dinithanavanith@gmail.com
+WHO AM I
+A little about me.
+A little about me.
+Iˇm a Software Engineering undergraduate with a strong interest in UI/UX design, frontend 
+development, and digital product experiences.
+I enjoy understanding how people interact with products, finding what makes an 
+experience confusing, and turning those problems into interfaces that feel simple and 
+natural.
+For me, design isnˇt only about making something look good. Itˇs about making something 
+easier to understand, easier to use, and meaningful to the people using it.
+DESIGN × DEVELOPMENT
+I donˇt see design and development as separate.
+DESIGN
+Figma
+Wireframes
+Prototypes
+Design Systems
+BUILD
+React
+HTML / CSS
+JavaScript
+Node.js
+I like being involved from the first idea to the final interface.
+I can think through user flows, create wireframes and prototypes, build visual systems, and 
+then translate those ideas into functional frontend experiences.
+Working across both sides helps me make better decisions  because Iˇm not only thinking 
+about how a product should look, but also how it should work.
+How I Work
+My way of working
+Understand
+01
+I start with the people, problem and context.
+Explore
+I explore ideas, flows and visual directions before jumping into 
+solutions.
+Refine
+03
+I remove unnecessary complexity and focus on what makes 
+the experience clearer.
+Build
+I turn the final direction into a functional, responsive product.
+02
+04
+UI/UX DESIGNER & DEVELOPER
+Building thoughtful digital experiences.
+Main
+Home
+About
+Work
+Contact
+Resume
+Contact
+Contact via Linkedin
+Get in touch
+Email
+dinithanavanith@gmail.com
+© 2026 Dinitha Navanith (DINA) . All Rights Reserved.
+
+
+=== original_portfolio_wireframe_2.pdf ===
+--- Page 1 (Rect(0.0, 0.0, 1440.0, 6327.0)) ---
+Dinitha Navanith
+From pixels to products...
+Home
+About
+Work
+Contact
+Resume
+Let's talk
+From pixels
+to products.
+UI/UX DESIGNER · DEVELOPER
+I design thoughtful digital experiences 
+and turn them into functional, user-
+focused products.
+View my
+work
+DINITHA NAVANITH(
+Software Engineering Undergraduate · Sri Lanka
+Currently
+UI/UX Designer & Developer Trainee
+HOW I THINK
+I design with purpose,
+not decoration.
+Iˇm a UI/UX designer and developer who enjoys turning complex ideas into simple, useful 
+digital experiences. I care about how things look, but more importantly, how they work.
+01
+03
+Understand
+I start by understanding the people, problem and context behind a product.
+02
+Simplify
+ I remove the unnecessary and focus on what makes the experience clearer.
+Build
+I bring ideas to life through thoughtful design and code.
+Design
+Code
+I don't stop at the design. I enjoy taking an idea from the first sketch to a polished 
+interface  designing the experience, building the front end, and making sure the final 
+product feels as good as it looks.
+DESIGN
+Figma
+Wireframes
+Prototypes
+Design Systems
+BUILD
+React
+HTML / CSS
+JavaScript
+Node.js
+Good design makes things easier 
+to understand.(
+Good development makes them 
+real. 
+I enjoy doing both.
+SELECTED WORK
+A few things Iˇve designed,
+built and brought to life.
+CARPOOL
+Designing a smoother everyday ride-
+sharing experience.
+UI/UX
+01
+PRODUCT DESIGN
+REACT
+NODE.JS
+View
+STUDENT ENROLMENT
+A desktop system for managing 
+students.
+JAVA
+02
+MYSQL
+UI/UX
+View
+FITNESS TRACKER
+Designing a simpler way to 
+understand personal fitness data.
+PHP
+03
+MYSQL
+UI/UX
+View
+MONDY CINEMA
+A cinematic web experience designed 
+for discovering what to watch next.
+PHP
+04
+MYSQL
+UI/UX
+FRONTEND
+View
+See all projects
+JOURNEY
+Learning, designing,
+Learning, designing, 
+From university projects to professional product work, every experience has shaped the 
+way I think, design and build.
+2024
+ICBT IT Society
+Leadership / Community
+2024  Present
+Ecole Language 
+Institute
+Social Media Content Creator
+2024  Present
+TREELOQ
+UI/UX Designer & Developer Trainee
+SKILLS
+Design with intention.
+Build with precision.
+My toolkit moves between visual design, user experience and software development.
+DESIGN
+UI/UX Design
+Wireframing
+Product Design
+Design Systems
+Prototyping
+Interaction Design
+DEVELOPMENT
+HTML / CSS
+JavaScript
+Node.js
+Vue.js
+MySQL
+React
+TOOLS 
+Figma
+GitHub
+VS Code
+Protoshop
+MySQL Workbench
+Jira
+APPROACH
+User-Centered Design
+Design Thinking
+Problem Solving
+Responsive Design
+KIND WORDS
+What people say
+about working with me.
+DINITHA BRINGS A THOUGHTFUL 
+APPROACH TO BOTH DESIGN 
+AND DEVELOPMENT.˛
+A reliable and creative individual who 
+consistently brings fresh ideas to the table.˛
+Name Surname
+Role · Company / Institution
+Name Surname
+Role · Company / Institution
+Great attention to detail and a strong problem-
+solving mindset.˛
+Name Surname
+Role · Company / Institution
+LETˇS S TALK
+Have an idea?
+Letˇss make it real.
+Have an idea?
+Letˇs s make it real.
+Whether youˇre looking for a designer, 
+developer, collaborator, or simply what to 
+say
+ hello - iˇd d love to hear from you.
+Start conversation
+dinithanavanith@gmail.com
+linkedin.com/in/dnavanith
+github.com/d-navanith
+instagram.com/d_navanith.uixart/
+UI/UX DESIGNER & DEVELOPER
+Building thoughtful digital experiences.
+Main
+Home
+About
+Work
+Contact
+Resume
+Contact
+Contact via Linkedin
+Get in touch
+Email
+dinithanavanith@gmail.com
+© 2026 Dinitha Navanith (DINA) . All Rights Reserved.
+
+

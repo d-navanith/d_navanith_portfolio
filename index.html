@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinitha Navanith | UI/UX Designer & Developer</title>
+  <meta name="description" content="Dinitha Navanith — UI/UX Designer & Developer. Turning thoughtful interfaces and modern engineering into functional, user-focused digital products.">
+  
+  <!-- Modern Geometric Humanist Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean micro-arrows -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Editorial Theme Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Subtle Progress Beam -->
+  <div class="scroll-progress-beam" id="scrollProgress"></div>
+
+  <!-- Custom Smooth Follower Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="navbar-container">
+    <div class="navbar-inner">
+      
+      <!-- Brand Mascot Lockup -->
+      <a href="#hero" class="nav-brand">
+        <div class="mascot-avatar-wrap">
+          <img src="assets/dinitha-mascot-vector.png" alt="Dinitha Navanith Mascot" class="brand-mascot">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Dinitha Navanith</span>
+          <span class="brand-tagline">From pixels to products...</span>
+        </div>
+      </a>
+
+      <!-- Floating Center Pill Navigation -->
+      <nav class="pill-nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://linkedin.com/in/dnavanith" target="_blank" rel="noopener noreferrer" class="nav-link nav-resume">Resume</a>
+      </nav>
+
+      <!-- Let's Talk CTA -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-talk-pill">
+          <span>Let's talk</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- ==================== HERO SECTION (Exact 3-Stage PDF Wireframe Composition) ==================== -->
+    <section id="hero" class="section hero-stage-section">
+      <div class="container hero-stage-container">
+        
+        <!-- Hero Left Column: Badge & Personal Metadata -->
+        <div class="hero-stage-left reveal-on-scroll">
+          <div class="hero-badge-pill">
+            <img src="assets/hero-badge-logo.png" alt="Emblem" class="hero-badge-icon">
+            <span>UI/UX DESIGNER · DEVELOPER</span>
+          </div>
+
+          <div class="hero-meta-bottom hero-meta-left">
+            <span class="meta-label">DINITHA NAVANITH</span>
+            <span class="meta-desc">Software Engineering Undergraduate · Sri Lanka</span>
+          </div>
+        </div>
+
+        <!-- Hero Center Stage: Authentic Transparent Cutout Portrait of Dinitha -->
+        <div class="hero-stage-center reveal-on-scroll">
+          <div class="hero-portrait-stage">
+            <div class="hero-portrait-backdrop"></div>
+            <img src="assets/dinitha-hero-cutout.png" alt="Dinitha Navanith — UI/UX Designer & Developer" class="hero-cutout-img">
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Editorial Headline, Subtitle, CTA & Currently Status -->
+        <div class="hero-stage-right reveal-on-scroll">
+          <h1 class="hero-stage-title">
+            From <span class="pixel-accent">pixels</span><br>
+            to products.
+          </h1>
+
+          <p class="hero-stage-desc">
+            I design thoughtful digital experiences and turn them into functional, user-focused products.
+          </p>
+
+          <div class="hero-stage-cta-row">
+            <a href="#work" class="btn-view-work">
+              <span>View my work</span>
+              <span class="cta-arrow-circle"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+          </div>
+
+          <div class="hero-meta-bottom hero-meta-right">
+            <span class="meta-label">Currently</span>
+            <span class="meta-desc">UI/UX Designer & Developer Trainee</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== HOW I THINK SECTION ==================== -->
+    <section id="about" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">HOW I THINK</h2>
+            <p class="section-tag-caption">I design with purpose,<br>not decoration.</p>
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="wireframe-right-col reveal-on-scroll">
+            
+            <p class="editorial-lead-statement">
+              I’m a UI/UX designer and developer who enjoys turning complex ideas into simple, useful digital experiences. I care about how things look, but more importantly, how they work.
+            </p>
+
+            <!-- 3-Step Flow: 01 Understand, 02 Simplify, 03 Build -->
+            <div class="steps-flow-container">
+              
+              <div class="step-flow-item">
+                <span class="step-number">01</span>
+                <div class="step-content">
+                  <h3 class="step-title">Understand</h3>
+                  <p class="step-desc">I start by understanding the people, problem and context behind a product.</p>
+                </div>
+              </div>
+
+              <div class="step-flow-item">
+                <span class="step-number">02</span>
+                <div class="step-content">
+                  <h3 class="step-title">Simplify</h3>
+                  <p class="step-desc">I remove the unnecessary and focus on what makes the experience clearer.</p>
+                </div>
+              </div>
+
+              <div class="step-flow-item">
+                <span class="step-number">03</span>
+                <div class="step-content">
+                  <h3 class="step-title">Build</h3>
+                  <p class="step-desc">I bring ideas to life through thoughtful design and code.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Design × Code Integration Block -->
+            <div class="design-code-card reveal-on-scroll">
+              <h3 class="design-code-title">Design × Code</h3>
+              <p class="design-code-sub">
+                I don’t stop at the design. I enjoy taking an idea from the first sketch to a polished interface — designing the experience, building the front end, and making sure the final product feels as good as it looks.
+              </p>
+
+              <div class="design-code-grid">
+                
+                <!-- Pillar 1: DESIGN -->
+                <div class="pillar-box">
+                  <div class="pillar-header">
+                    <img src="assets/logo-figma.png" alt="Figma" class="pillar-logo-img">
+                    <span class="pillar-name">DESIGN</span>
+                  </div>
+                  <ul class="pillar-list">
+                    <li>Figma</li>
+                    <li>Wireframes</li>
+                    <li>Prototypes</li>
+                    <li>Design Systems</li>
+                  </ul>
+                </div>
+
+                <!-- Pillar 2: BUILD -->
+                <div class="pillar-box">
+                  <div class="pillar-header">
+                    <img src="assets/logo-react.png" alt="React" class="pillar-logo-img">
+                    <span class="pillar-name">BUILD</span>
+                  </div>
+                  <ul class="pillar-list">
+                    <li>React</li>
+                    <li>HTML / CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                  </ul>
+                </div>
+
+                <!-- Pillar 3: Editorial Callout -->
+                <div class="pillar-box pillar-callout-box">
+                  <p class="callout-quote-text">
+                    Good design makes things easier to understand.<br><br>
+                    Good development makes them real.<br><br>
+                    <strong>I enjoy doing both.</strong>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SELECTED WORK SECTION ==================== -->
+    <section id="work" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">SELECTED WORK</h2>
+            <p class="section-tag-caption">A few things I’ve designed,<br>built and brought to life.</p>
+          </div>
+
+          <!-- Right Content Column: Vertical Stack of Project Cards -->
+          <div class="wireframe-right-col">
+            
+            <div class="project-cards-stack">
+
+              <!-- Project 01: CARPOOL -->
+              <article class="project-editorial-card reveal-on-scroll">
+                <div class="project-img-container" onclick="openCaseStudy('carpool')">
+                  <img src="assets/project-carpool-banner.jpeg" alt="Carpool - A Smarter Way to Travel Together" class="project-card-banner">
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('carpool')">CARPOOL</h3>
+                    <p class="project-tagline">Designing a smoother everyday ride-sharing experience.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">01</span>
+                      <div class="project-tags">
+                        <span>UI/UX</span>
+                        <span>PRODUCT DESIGN</span>
+                        <span>REACT</span>
+                        <span>NODE.JS</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('carpool')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 02: STUDENT ENROLMENT -->
+              <article class="project-editorial-card reveal-on-scroll">
+                <div class="project-img-container" onclick="openCaseStudy('student')">
+                  <img src="assets/project-student-enrolment.jpeg" alt="Student Enrolment System" class="project-card-banner">
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('student')">STUDENT ENROLMENT</h3>
+                    <p class="project-tagline">A desktop system for managing students.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">02</span>
+                      <div class="project-tags">
+                        <span>JAVA</span>
+                        <span>MYSQL</span>
+                        <span>UI/UX</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('student')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 03: FITNESS TRACKER -->
+              <article class="project-editorial-card reveal-on-scroll">
+                <div class="project-img-container" onclick="openCaseStudy('fitness')">
+                  <img src="assets/project-fitness-tracker.jpeg" alt="Personal Fitness Tracker" class="project-card-banner">
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('fitness')">FITNESS TRACKER</h3>
+                    <p class="project-tagline">Designing a simpler way to understand personal fitness data.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">03</span>
+                      <div class="project-tags">
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>UI/UX</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('fitness')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 04: MONDY CINEMA -->
+              <article class="project-editorial-card reveal-on-scroll">
+                <div class="project-img-container" onclick="openCaseStudy('mondy')">
+                  <img src="assets/project-mondy-cinema.jpeg" alt="Mondy Cinema Discovery" class="project-card-banner">
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('mondy')">MONDY CINEMA</h3>
+                    <p class="project-tagline">A cinematic web experience designed for discovering what to watch next.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">04</span>
+                      <div class="project-tags">
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>UI/UX</span>
+                        <span>FRONTEND</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('mondy')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Expandable Latest Projects Drawer (Cleanly integrated without clutter) -->
+            <div class="latest-projects-tray" id="latestProjectsTray">
+              
+              <!-- Project 05: MarketPulse AI -->
+              <article class="project-editorial-card">
+                <div class="project-img-container project-code-gradient" onclick="openCaseStudy('marketpulse')">
+                  <div class="terminal-preview-card">
+                    <div class="term-dots"><span></span><span></span><span></span></div>
+                    <div class="term-code-snippet">
+                      <span class="term-line-accent"># MarketPulse AI Financial Agent</span>
+                      <span>Scheduled Cron: 08:00 AM • Daily Briefing</span>
+                      <span>Gemini API Intelligence Synthesis -> Telegram Channel</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('marketpulse')">MARKETPULSE AI TELEGRAM BOT</h3>
+                    <p class="project-tagline">Autonomous financial intelligence pipeline and scheduled telegram briefings.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">05</span>
+                      <div class="project-tags">
+                        <span>PYTHON</span>
+                        <span>GEMINI API</span>
+                        <span>N8N</span>
+                        <span>TELEGRAM BOT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('marketpulse')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 06: Roadster Rush -->
+              <article class="project-editorial-card">
+                <div class="project-img-container project-game-gradient" onclick="openCaseStudy('roadster')">
+                  <div class="game-hud-snippet">
+                    <span><i class="fa-solid fa-gauge-high"></i> 180 KM/H</span>
+                    <span><i class="fa-solid fa-car-side"></i> 60 FPS CANVAS</span>
+                    <span><i class="fa-solid fa-trophy"></i> 12,490 PTS</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('roadster')">ROADSTER RUSH CAR GAME</h3>
+                    <p class="project-tagline">2D dynamic arcade engine with continuous collision detection and physics.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">06</span>
+                      <div class="project-tags">
+                        <span>JAVASCRIPT ES6+</span>
+                        <span>HTML5 CANVAS</span>
+                        <span>2D PHYSICS</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('roadster')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 07: Web-to-Excel RPA -->
+              <article class="project-editorial-card">
+                <div class="project-img-container project-rpa-gradient" onclick="openCaseStudy('rpa')">
+                  <div class="rpa-preview-snippet">
+                    <i class="fa-solid fa-file-excel rpa-excel-icon"></i>
+                    <span>Automated Live Forex Ingestion & Desktop RPA Pipeline</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-info-block">
+                    <h3 class="project-title" onclick="openCaseStudy('rpa')">WEB-TO-EXCEL & DESKTOP RPA</h3>
+                    <p class="project-tagline">Automated Forex ingestion and financial workbook pipeline.</p>
+                    <div class="project-meta-row">
+                      <span class="project-index">07</span>
+                      <div class="project-tags">
+                        <span>POWER AUTOMATE</span>
+                        <span>PYTHON</span>
+                        <span>EXCEL API</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-action-block">
+                    <button class="btn-card-view" onclick="openCaseStudy('rpa')">
+                      <span>View</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- "See all projects" Toggle Button -->
+            <div class="see-all-wrap reveal-on-scroll">
+              <button class="btn-see-all-toggle" id="btnSeeAllProjects" onclick="toggleAllProjects()">
+                <span id="seeAllBtnText">See all projects</span>
+                <i class="fa-solid fa-arrow-down" id="seeAllBtnIcon"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== JOURNEY SECTION ==================== -->
+    <section id="journey" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">JOURNEY</h2>
+            <p class="section-tag-caption">Learning, designing.<br>Learning, designing.</p>
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="wireframe-right-col reveal-on-scroll">
+            
+            <p class="editorial-lead-statement">
+              From university projects to professional product work, every experience has shaped the way I think, design and build.
+            </p>
+
+            <div class="journey-cards-grid">
+              
+              <!-- Card 1: ICBT IT Society -->
+              <div class="journey-card">
+                <div class="journey-logo-box">
+                  <img src="assets/journey-icbt.png" alt="ICBT IT Society" class="journey-brand-img">
+                </div>
+                <div class="journey-year">2024</div>
+                <h3 class="journey-title">ICBT IT Society</h3>
+                <span class="journey-role">Leadership / Community</span>
+              </div>
+
+              <!-- Card 2: École Language Institute -->
+              <div class="journey-card">
+                <div class="journey-logo-box">
+                  <img src="assets/journey-ecole.png" alt="École Language Institute" class="journey-brand-img">
+                </div>
+                <div class="journey-year">2024 – Present</div>
+                <h3 class="journey-title">Ecole Language Institute</h3>
+                <span class="journey-role">Social Media Content Creator</span>
+              </div>
+
+              <!-- Card 3: TREELOQ -->
+              <div class="journey-card">
+                <div class="journey-logo-box">
+                  <img src="assets/journey-treeloq.png" alt="TREELOQ" class="journey-brand-img">
+                </div>
+                <div class="journey-year">2024 – Present</div>
+                <h3 class="journey-title">TREELOQ</h3>
+                <span class="journey-role">UI/UX Designer & Developer Trainee</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">SKILLS</h2>
+            <p class="section-tag-caption">Design with intention.<br>Build with precision.</p>
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="wireframe-right-col reveal-on-scroll">
+            
+            <p class="editorial-lead-statement">
+              My toolkit moves between visual design, user experience and software development.
+            </p>
+
+            <div class="skills-2x2-grid">
+              
+              <!-- Card 1: DESIGN -->
+              <div class="skill-card">
+                <div class="skill-card-img-wrap">
+                  <img src="assets/skills-design-preview.jpeg" alt="Design Toolkit Mockup" class="skill-card-img">
+                </div>
+                <div class="skill-card-body">
+                  <h3 class="skill-group-title">DESIGN</h3>
+                  <div class="skill-pills-wrap">
+                    <span>UI/UX Design</span>
+                    <span>Product Design</span>
+                    <span>Design Systems</span>
+                    <span>Wireframing</span>
+                    <span>Prototyping</span>
+                    <span>Interaction Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: DEVELOPMENT -->
+              <div class="skill-card">
+                <div class="skill-card-img-wrap">
+                  <img src="assets/skills-dev-preview.jpeg" alt="Development Code Mockup" class="skill-card-img">
+                </div>
+                <div class="skill-card-body">
+                  <h3 class="skill-group-title">DEVELOPMENT</h3>
+                  <div class="skill-pills-wrap">
+                    <span>HTML / CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Vue.js</span>
+                    <span>MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: TOOLS -->
+              <div class="skill-card">
+                <div class="skill-card-img-wrap">
+                  <img src="assets/skills-tools-preview.jpeg" alt="Design & Dev Tools" class="skill-card-img">
+                </div>
+                <div class="skill-card-body">
+                  <h3 class="skill-group-title">TOOLS</h3>
+                  <div class="skill-pills-wrap">
+                    <span>Figma</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>Photoshop</span>
+                    <span>MySQL Workbench</span>
+                    <span>Jira</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: APPROACH -->
+              <div class="skill-card">
+                <div class="skill-card-img-wrap">
+                  <img src="assets/skills-approach-preview.jpeg" alt="Human Centered Methodology" class="skill-card-img">
+                </div>
+                <div class="skill-card-body">
+                  <h3 class="skill-group-title">APPROACH</h3>
+                  <div class="skill-pills-wrap">
+                    <span>User-Centered Design</span>
+                    <span>Design Thinking</span>
+                    <span>Problem Solving</span>
+                    <span>Responsive Design</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== KIND WORDS SECTION ==================== -->
+    <section id="testimonials" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">KIND WORDS</h2>
+            <p class="section-tag-caption">What people say<br>about working with me.</p>
+          </div>
+
+          <!-- Right Content Column: Split Testimonials Layout -->
+          <div class="wireframe-right-col reveal-on-scroll">
+            
+            <div class="kind-words-grid">
+              
+              <!-- Featured Quote Card on Left -->
+              <div class="featured-quote-card">
+                <div class="quote-symbol">“</div>
+                <blockquote class="featured-quote-text">
+                  DINITHA BRINGS A THOUGHTFUL APPROACH TO BOTH DESIGN AND DEVELOPMENT.
+                </blockquote>
+                <div class="author-block">
+                  <img src="assets/testimonial-avatar-1.jpeg" alt="Testimonial Author" class="author-avatar-circle">
+                  <div class="author-credentials">
+                    <strong class="author-name">Name Surname</strong>
+                    <span class="author-role">Role · Company / Institution</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stacked Quotes on Right -->
+              <div class="stacked-quotes-col">
+                
+                <div class="sub-quote-card">
+                  <div class="quote-symbol-small">“</div>
+                  <p class="sub-quote-text">
+                    A reliable and creative individual who consistently brings fresh ideas to the table.
+                  </p>
+                  <div class="author-block">
+                    <img src="assets/testimonial-avatar-2.jpeg" alt="Testimonial Author" class="author-avatar-circle">
+                    <div class="author-credentials">
+                      <strong class="author-name">Name Surname</strong>
+                      <span class="author-role">Role · Company / Institution</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sub-quote-card">
+                  <div class="quote-symbol-small">“</div>
+                  <p class="sub-quote-text">
+                    Great attention to detail and a strong problem solving mindset.
+                  </p>
+                  <div class="author-block">
+                    <img src="assets/testimonial-avatar-3.jpeg" alt="Testimonial Author" class="author-avatar-circle">
+                    <div class="author-credentials">
+                      <strong class="author-name">Name Surname</strong>
+                      <span class="author-role">Role · Company / Institution</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LET'S TALK / CONTACT SECTION ==================== -->
+    <section id="contact" class="section editorial-section">
+      <div class="container">
+        
+        <div class="wireframe-split-row">
+          
+          <!-- Sticky Left Anchor -->
+          <div class="wireframe-left-col reveal-on-scroll">
+            <h2 class="section-tag-heading">LET’S TALK</h2>
+            <p class="section-tag-caption">Have an idea?<br>Let’s make it real.</p>
+          </div>
+
+          <!-- Right Content Column: 2-Column Contact Block -->
+          <div class="wireframe-right-col reveal-on-scroll">
+            
+            <div class="lets-talk-grid">
+              
+              <!-- Left Talk Callout -->
+              <div class="talk-statement-block">
+                <h3 class="talk-heading">
+                  Have an idea?<br>
+                  Let’s make it real.
+                </h3>
+                <p class="talk-description">
+                  Whether you’re looking for a designer, developer, collaborator, or simply want to say hello — I’d love to hear from you.
+                </p>
+                <div class="talk-cta-wrap">
+                  <a href="mailto:dinithanavanith@gmail.com" class="btn-start-conversation">
+                    <span>Start conversation</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Contact App Links (Exact Logos from PDF) -->
+              <div class="talk-pills-col">
+                
+                <a href="mailto:dinithanavanith@gmail.com" class="contact-app-pill">
+                  <img src="assets/contact-email-logo.png" alt="Email" class="app-icon-img">
+                  <span class="app-pill-label">dinithanavanith@gmail.com</span>
+                </a>
+
+                <a href="https://linkedin.com/in/dnavanith" target="_blank" rel="noopener noreferrer" class="contact-app-pill">
+                  <img src="assets/contact-linkedin-logo.png" alt="LinkedIn" class="app-icon-img">
+                  <span class="app-pill-label">linkedin.com/in/dnavanith</span>
+                </a>
+
+                <a href="https://github.com/d-navanith" target="_blank" rel="noopener noreferrer" class="contact-app-pill">
+                  <img src="assets/contact-github-logo.png" alt="GitHub" class="app-icon-img">
+                  <span class="app-pill-label">github.com/d-navanith</span>
+                </a>
+
+                <a href="https://instagram.com/d_navanith.uixart/" target="_blank" rel="noopener noreferrer" class="contact-app-pill">
+                  <img src="assets/contact-instagram-logo.png" alt="Instagram" class="app-icon-img">
+                  <span class="app-pill-label">instagram.com/d_navanith.uixart/</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-section">
+    <div class="container footer-container">
+      
+      <div class="footer-content-row">
+        
+        <!-- Left: Mascot & Role -->
+        <div class="footer-mascot-col">
+          <img src="assets/dinitha-mascot-vector.png" alt="Dinitha Navanith Mascot" class="footer-mascot-avatar">
+          <div class="footer-role-block">
+            <h4 class="footer-role-title">UI/UX DESIGNER & DEVELOPER</h4>
+            <p class="footer-role-desc">Building thoughtful digital experiences.</p>
+          </div>
+        </div>
+
+        <!-- Middle: Nav Columns -->
+        <div class="footer-nav-col">
+          <span class="footer-col-title">Main</span>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+          <a href="https://linkedin.com/in/dnavanith" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="footer-col-title">Contact</span>
+          <a href="https://linkedin.com/in/dnavanith" target="_blank" rel="noopener noreferrer">Contact via Linkedin</a>
+          <a href="#contact">Get in touch</a>
+          <span class="footer-col-subheading">Email</span>
+          <a href="mailto:dinithanavanith@gmail.com" class="footer-email-link">dinithanavanith@gmail.com</a>
+          
+          <div class="footer-social-row">
+            <a href="https://linkedin.com/in/dnavanith" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="LinkedIn">
+              <img src="assets/contact-linkedin-logo.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/d-navanith" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="GitHub">
+              <img src="assets/contact-github-logo.png" alt="GitHub">
+            </a>
+            <a href="https://instagram.com/d_navanith.uixart/" target="_blank" rel="noopener noreferrer" class="footer-social-icon-btn" title="Instagram">
+              <img src="assets/contact-instagram-logo.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Lounge Chair Artwork from PDF Wireframe -->
+        <div class="footer-artwork-col">
+          <img src="assets/dinitha-chair-cutout.png" alt="Dinitha Relaxing with Laptop" class="footer-chair-artwork">
+        </div>
+
+      </div>
+
+      <!-- Giant Signature Watermark -->
+      <div class="footer-watermark-row">
+        <span class="watermark-text">DINITHA NAVANITH.</span>
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-copyright-row">
+        <p>© 2026 Dinitha Navanith (DINA) . All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CASE STUDY INTERACTIVE MODAL DRAWER -->
+  <div id="caseStudyModal" class="modal-backdrop" onclick="closeCaseStudy(event)">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeCaseStudy()" aria-label="Close Case Study"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalContent" class="modal-body">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Client-side Interactions -->
+  <script src="app.js"></script>
+</body>
+</html>

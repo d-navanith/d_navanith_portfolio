@@ -1,0 +1,156 @@
+=== TEXT BLOCKS ===
+Rect(209.0, 23.0, 372.4, 60.0) : Dinitha Navanith From pixels to products...
+Rect(514.5, 25.0, 1314.2, 47.0) : Home About Work Contact Resume Let's talk
+Rect(878.0, 221.0, 1220.2, 285.0) : From pixels
+Rect(948.0, 303.0, 1307.8, 367.0) : to products.
+Rect(165.7, 427.1, 401.0, 444.4) : UI/UX DESIGNER · DEVELOPER
+Rect(967.0, 406.0, 1346.7, 426.0) : I design thoughtful digital experiences
+Rect(985.0, 437.0, 1332.8, 457.0) : and turn them into functional, user-
+Rect(1008.0, 468.0, 1186.1, 488.0) : focused products.
+Rect(1256.0, 522.0, 1329.7, 565.0) : View my work
+Rect(119.0, 667.0, 420.9, 698.0) : DINITHA NAVANITH( Software Engineering Undergraduate · Sri Lanka
+Rect(1117.8, 667.0, 1343.0, 698.0) : Currently UI/UX Designer & Developer Trainee
+Rect(93.0, 793.0, 341.4, 832.0) : HOW I THINK
+Rect(133.0, 853.0, 338.8, 873.0) : I design with purpose,
+Rect(133.0, 884.0, 276.9, 904.0) : not decoration.
+Rect(491.0, 792.0, 1350.6, 839.0) : Iˇm a UI/UX designer and developer who enjoys turning complex ideas into simple, useful  digital experiences. I care about how things look, but more importantly, how they work.
+Rect(496.0, 917.0, 535.5, 953.0) : 01
+Rect(491.0, 1199.0, 535.6, 1235.0) : 03
+Rect(583.0, 917.0, 798.6, 953.0) : Understand
+Rect(583.0, 986.0, 1313.7, 1006.0) : I start by understanding the people, problem and context behind a product.
+Rect(1017.0, 1056.0, 1255.2, 1095.0) : 02 Simplify
+Rect(583.0, 1129.0, 1316.9, 1149.0) : I remove the unnecessary and focus on what makes the experience clearer.
+Rect(583.0, 1199.0, 674.9, 1235.0) : Build
+Rect(583.0, 1268.0, 1122.6, 1288.0) : I bring ideas to life through thoughtful design and code.
+Rect(496.0, 1377.0, 780.2, 1413.0) : Design Code
+Rect(496.0, 1456.0, 1337.6, 1530.0) : I don't stop at the design. I enjoy taking an idea from the first sketch to a polished  interface  designing the experience, building the front end, and making sure the final  product feels as good as it looks.
+Rect(606.0, 1609.0, 680.8, 1629.0) : DESIGN
+Rect(606.0, 1658.0, 651.6, 1674.0) : Figma
+Rect(606.0, 1692.0, 694.9, 1708.0) : Wireframes
+Rect(606.0, 1726.0, 692.4, 1742.0) : Prototypes
+Rect(606.0, 1760.0, 730.3, 1776.0) : Design Systems
+Rect(921.0, 1609.0, 979.8, 1629.0) : BUILD
+Rect(921.0, 1658.0, 966.3, 1674.0) : React
+Rect(921.0, 1692.0, 1011.1, 1708.0) : HTML / CSS
+Rect(921.0, 1726.0, 1001.9, 1742.0) : JavaScript
+Rect(921.0, 1760.0, 979.3, 1776.0) : Node.js
+Rect(1076.0, 1636.0, 1336.8, 1740.0) : Good design makes things easier  to understand.( Good development makes them  real.  I enjoy doing both.
+Rect(93.0, 1917.0, 426.0, 1956.0) : SELECTED WORK
+Rect(133.0, 1977.0, 381.8, 1997.0) : A few things Iˇve designed,
+Rect(133.0, 2008.0, 356.8, 2028.0) : built and brought to life.
+Rect(541.0, 2203.0, 688.8, 2234.0) : CARPOOL
+Rect(541.0, 2244.0, 826.1, 2282.0) : Designing a smoother everyday ride- sharing experience.
+Rect(541.0, 2313.0, 584.0, 2329.0) : UI/UX
+Rect(541.0, 2344.0, 566.5, 2368.0) : 01
+Rect(600.0, 2313.0, 880.9, 2329.0) : PRODUCT DESIGN REACT NODE.JS
+Rect(1257.0, 2329.0, 1299.3, 2349.0) : View
+Rect(541.0, 2714.0, 882.5, 2745.0) : STUDENT ENROLMENT
+Rect(541.0, 2755.0, 788.5, 2793.0) : A desktop system for managing  students.
+Rect(541.0, 2824.0, 576.6, 2840.0) : JAVA
+Rect(541.0, 2855.0, 570.5, 2879.0) : 02
+Rect(592.0, 2824.0, 703.0, 2840.0) : MYSQL UI/UX
+Rect(1257.0, 2840.0, 1299.3, 2860.0) : View
+Rect(541.0, 3225.0, 817.5, 3256.0) : FITNESS TRACKER
+Rect(541.0, 3266.0, 805.0, 3304.0) : Designing a simpler way to  understand personal fitness data.
+Rect(541.0, 3335.0, 571.8, 3351.0) : PHP
+Rect(541.0, 3366.0, 570.1, 3390.0) : 03
+Rect(587.0, 3335.0, 698.0, 3351.0) : MYSQL UI/UX
+Rect(1257.0, 3351.0, 1299.3, 3371.0) : View
+Rect(541.0, 3736.0, 780.4, 3767.0) : MONDY CINEMA
+Rect(541.0, 3777.0, 838.2, 3815.0) : A cinematic web experience designed  for discovering what to watch next.
+Rect(541.0, 3846.0, 571.8, 3862.0) : PHP
+Rect(541.0, 3877.0, 570.8, 3901.0) : 04
+Rect(587.0, 3846.0, 796.1, 3862.0) : MYSQL UI/UX FRONTEND
+Rect(1257.0, 3862.0, 1299.3, 3882.0) : View
+Rect(1224.0, 3959.0, 1344.1, 3975.0) : See all projects
+Rect(93.0, 4064.0, 277.2, 4103.0) : JOURNEY
+Rect(133.0, 4124.0, 322.5, 4144.0) : Learning, designing,
+Rect(133.0, 4155.0, 327.1, 4175.0) : Learning, designing,
+Rect(491.0, 4063.0, 1333.0, 4110.0) : From university projects to professional product work, every experience has shaped the  way I think, design and build.
+Rect(503.0, 4272.0, 533.8, 4285.0) : 2024
+Rect(503.0, 4299.0, 641.2, 4319.0) : ICBT IT Society
+Rect(503.0, 4330.0, 654.4, 4343.0) : Leadership / Community
+Rect(788.0, 4272.0, 884.4, 4285.0) : 2024  Present
+Rect(788.0, 4299.0, 940.0, 4346.0) : Ecole Language  Institute
+Rect(788.0, 4359.0, 971.6, 4372.0) : Social Media Content Creator
+Rect(1074.0, 4271.0, 1170.4, 4284.0) : 2024  Present
+Rect(1074.0, 4298.0, 1161.1, 4318.0) : TREELOQ
+Rect(1074.0, 4329.0, 1295.5, 4342.0) : UI/UX Designer & Developer Trainee
+Rect(93.0, 4462.0, 227.8, 4501.0) : SKILLS
+Rect(133.0, 4522.0, 337.8, 4542.0) : Design with intention.
+Rect(133.0, 4553.0, 319.8, 4573.0) : Build with precision.
+Rect(491.0, 4461.0, 1301.0, 4481.0) : My toolkit moves between visual design, user experience and software development.
+Rect(515.0, 4700.0, 588.5, 4720.0) : DESIGN
+Rect(527.0, 4735.0, 608.2, 4748.0) : UI/UX Design
+Rect(527.0, 4757.0, 602.1, 4770.0) : Wireframing
+Rect(628.0, 4735.0, 842.4, 4748.0) : Product Design Design Systems
+Rect(622.0, 4757.0, 829.4, 4770.0) : Prototyping Interaction Design
+Rect(936.0, 4700.0, 1082.2, 4720.0) : DEVELOPMENT
+Rect(948.0, 4735.0, 1104.4, 4748.0) : HTML / CSS JavaScript
+Rect(948.0, 4757.0, 1113.8, 4770.0) : Node.js Vue.js MySQL
+Rect(1124.0, 4735.0, 1160.3, 4748.0) : React
+Rect(515.0, 4993.0, 586.2, 5013.0) : TOOLS
+Rect(527.0, 5028.0, 697.1, 5041.0) : Figma GitHub VS Code
+Rect(527.0, 5050.0, 767.2, 5063.0) : Protoshop MySQL Workbench Jira
+Rect(936.0, 4993.0, 1045.7, 5013.0) : APPROACH
+Rect(948.0, 5028.0, 1206.9, 5041.0) : User-Centered Design Design Thinking
+Rect(948.0, 5050.0, 1184.1, 5063.0) : Problem Solving Responsive Design
+Rect(93.0, 5153.0, 348.0, 5192.0) : KIND WORDS
+Rect(133.0, 5213.0, 289.6, 5233.0) : What people say
+Rect(133.0, 5244.0, 349.3, 5264.0) : about working with me.
+Rect(522.3, 5218.7, 913.2, 5308.7) : DINITHA BRINGS A THOUGHTFUL  APPROACH TO BOTH DESIGN  AND DEVELOPMENT.˛
+Rect(980.3, 5179.7, 1269.9, 5210.7) : A reliable and creative individual who  consistently brings fresh ideas to the table.˛
+Rect(1046.3, 5245.7, 1221.4, 5276.7) : Name Surname Role · Company / Institution
+Rect(619.3, 5369.7, 888.6, 5416.7) : Name Surname Role · Company / Institution
+Rect(980.6, 5339.4, 1286.2, 5370.4) : Great attention to detail and a strong problem- solving mindset.˛
+Rect(1046.6, 5405.4, 1221.7, 5436.4) : Name Surname Role · Company / Institution
+Rect(93.0, 5568.7, 308.3, 5607.7) : LETˇS S TALK
+Rect(133.0, 5628.7, 262.5, 5648.7) : Have an idea?
+Rect(133.0, 5659.7, 293.5, 5679.7) : Letˇss make it real.
+Rect(498.0, 5569.7, 917.2, 5675.7) : Have an idea? Letˇs s make it real.
+Rect(499.0, 5706.7, 902.5, 5780.7) : Whether youˇre looking for a designer,  developer, collaborator, or simply what to  say  hello - iˇd d love to hear from you.
+Rect(519.0, 5815.7, 691.8, 5835.7) : Start conversation
+Rect(1063.0, 5608.7, 1274.5, 5624.7) : dinithanavanith@gmail.com
+Rect(1063.0, 5670.7, 1260.3, 5686.7) : linkedin.com/in/dnavanith
+Rect(1063.0, 5734.7, 1237.8, 5750.7) : github.com/d-navanith
+Rect(1063.0, 5799.7, 1324.1, 5815.7) : instagram.com/d_navanith.uixart/
+Rect(93.0, 6100.7, 534.6, 6160.7) : UI/UX DESIGNER & DEVELOPER Building thoughtful digital experiences.
+Rect(620.0, 5994.7, 650.1, 6007.7) : Main
+Rect(620.0, 6016.7, 656.9, 6029.7) : Home
+Rect(620.0, 6042.7, 658.7, 6055.7) : About
+Rect(620.0, 6068.7, 652.0, 6081.7) : Work
+Rect(620.0, 6094.7, 672.7, 6107.7) : Contact
+Rect(620.0, 6120.7, 671.5, 6133.7) : Resume
+Rect(748.0, 5994.7, 799.9, 6007.7) : Contact
+Rect(748.0, 6016.7, 879.2, 6029.7) : Contact via Linkedin
+Rect(748.0, 6048.7, 825.5, 6061.7) : Get in touch
+Rect(748.0, 6127.7, 781.3, 6140.7) : Email
+Rect(748.0, 6149.7, 927.1, 6162.7) : dinithanavanith@gmail.com
+Rect(557.0, 6300.7, 884.4, 6313.7) : © 2026 Dinitha Navanith (DINA) . All Rights Reserved.
+
+=== IMAGES ===
+xref=3252, 1920x486, rects=[Rect(1078.0355224609375, 4204.87646484375, 1147.9188232421875, 4222.5654296875)]
+xref=3236, 2232x704, rects=[Rect(491.0, 2425.953369140625, 1360.0, 2700.046630859375)]
+xref=3232, 2172x724, rects=[Rect(491.0, 2929.16650390625, 1360.0, 3218.833251953125)]
+xref=3204, 1320x1191, rects=[Rect(748.0, 6069.56591796875, 796.0, 6112.875), Rect(994.9546508789062, 5656.72021484375, 1047.0452880859375, 5703.72021484375)]
+xref=3208, 1068x1473, rects=[Rect(114.815185546875, 410.716064453125, 153.55567932128906, 464.1474609375)]
+xref=3256, 447x447, rects=[Rect(788.0, 4176.0, 866.0, 4254.0)]
+xref=3304, 1304x1206, rects=[Rect(877.7529296875, 6069.72021484375, 924.2471313476562, 6112.72021484375), Rect(995.0, 5785.67431640625, 1047.0, 5833.76611328125)]
+xref=3244, 1536x1024, rects=[Rect(50.117191314697266, 5929.05322265625, 344.9609069824219, 6126.38671875), Rect(63.59375, -9.476188659667969, 225.46871948242188, 97.64762115478516)]
+xref=3240, 1042x1250, rects=[Rect(460.0, 106.0, 981.0, 731.0)]
+xref=3248, 2178x722, rects=[Rect(491.0, 1907.964599609375, 1360.0, 2196.035400390625)]
+xref=3260, 2173x724, rects=[Rect(491.0, 3440.233154296875, 1360.0, 3729.7666015625)]
+xref=3264, 2013x2013, rects=[Rect(503.0, 4176.0, 581.0, 4254.0)]
+xref=3268, 1156x1266, rects=[Rect(431.0, 98.0, 1009.0, 731.0)]
+xref=3276, 1981x794, rects=[Rect(911.8929443359375, 4828.0, 1301.1070556640625, 4984.0)]
+xref=3272, 1979x794, rects=[Rect(912.0, 4534.9638671875, 1301.0, 4691.03564453125)]
+xref=3284, 1302x1208, rects=[Rect(813.8269653320312, 6069.72021484375, 860.1729736328125, 6112.72021484375), Rect(995.0, 5720.59765625, 1047.0, 5768.84326171875)]
+xref=3280, 1024x1024, rects=[Rect(980.64013671875, 5398.4404296875, 1028.64013671875, 5446.4404296875)]
+xref=3288, 1983x793, rects=[Rect(490.4508056640625, 4828.0, 880.5491943359375, 4984.0)]
+xref=3292, 1024x1024, rects=[Rect(980.320068359375, 5238.72021484375, 1028.320068359375, 5286.72021484375)]
+xref=3296, 1024x1024, rects=[Rect(522.320068359375, 5358.72021484375, 596.320068359375, 5432.72021484375)]
+xref=3300, 1055x1491, rects=[Rect(1163.0, 5902.51318359375, 1360.0, 6180.92724609375)]
+xref=3308, 1981x793, rects=[Rect(490.6475524902344, 4535.0, 880.3524169921875, 4691.0)]
+xref=3312, 1374x1145, rects=[Rect(995.0, 5596.55322265625, 1047.0, 5639.88671875)]
+xref=3214, 48x136, rects=[Rect(858.916259765625, 1660.6083984375, 883.08349609375, 1729.0615234375)]
+xref=3220, 136x105, rects=[Rect(814.876953125, 1676.1922607421875, 883.08349609375, 1728.8359375)]
