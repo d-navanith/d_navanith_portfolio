@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initVaporizeSplashScreen();
   initLifecycleShowcase();
+  initJourneyTimeline();
   initScrollProgress();
   initCustomCursor();
   initScrollReveal();
@@ -447,6 +448,46 @@ function initLifecycleShowcase() {
   // Initial stage setup
   setStage(0);
   startTimer();
+}
+
+/* ---------------- 1.6 Hyperiux-Style Horizontal Axis Journey Timeline ---------------- */
+function initJourneyTimeline() {
+  const timelineSection = document.getElementById('journeyTimeline');
+  if (!timelineSection) return;
+
+  const axisLine = document.getElementById('journeyAxisLine');
+  const milestoneItems = timelineSection.querySelectorAll('.timeline-milestone-item');
+
+  // Trigger animation when timeline scrolls into view
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        timelineSection.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  observer.observe(timelineSection);
+
+  // Add interactive hover highlights to each milestone stem & node
+  milestoneItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const dot = item.querySelector('.stem-dot');
+      const line = item.querySelector('.stem-line');
+      if (dot) dot.style.filter = 'drop-shadow(0 0 10px #2563eb)';
+      if (line) line.style.background = '#2563eb';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      const dot = item.querySelector('.stem-dot');
+      const line = item.querySelector('.stem-line');
+      if (dot) dot.style.filter = '';
+      if (line) line.style.background = '';
+    });
+  });
 }
 
 /* ---------------- 1. Top Scroll Progress Beam ---------------- */
