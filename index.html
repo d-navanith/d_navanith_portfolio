@@ -19,6 +19,24 @@
 </head>
 <body>
 
+  <!-- ==================== VAPORIZE TEXT EFFECT SPLASH SCREEN ==================== -->
+  <div id="splashScreen" class="splash-screen-overlay">
+    <div class="splash-canvas-wrapper">
+      <canvas id="splashCanvas" class="splash-canvas"></canvas>
+    </div>
+    <div class="splash-bottom-bar">
+      <div class="splash-progress-dots">
+        <span class="splash-dot active" id="dot0"></span>
+        <span class="splash-dot" id="dot1"></span>
+        <span class="splash-dot" id="dot2"></span>
+      </div>
+      <button id="skipSplashBtn" class="splash-skip-btn" aria-label="Skip Intro">
+        <span>Skip intro</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
   <!-- Top Scroll Subtle Progress Beam -->
   <div class="scroll-progress-beam" id="scrollProgress"></div>
 

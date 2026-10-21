@@ -153,8 +153,110 @@ button {
 }
 
 /* ==========================================================================
-   HEADER & NAVBAR
+   VAPORIZE TEXT EFFECT SPLASH SCREEN
    ========================================================================== */
+.splash-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #07080c;
+  background-image: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.08) 0%, rgba(7, 8, 12, 0.98) 75%);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s ease;
+}
+
+.splash-screen-overlay.splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.splash-bottom-bar {
+  position: absolute;
+  bottom: clamp(24px, 5vh, 44px);
+  left: 0;
+  width: 100%;
+  padding: 0 clamp(20px, 5vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.splash-progress-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.splash-dot {
+  width: 24px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.splash-dot.active {
+  background: var(--accent-blue);
+  width: 44px;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+}
+
+.splash-skip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s var(--ease-smooth);
+}
+
+.splash-skip-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(3px);
+}
+
+@media (max-width: 640px) {
+  .splash-bottom-bar {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 .navbar-container {
   position: fixed;
   top: 0;

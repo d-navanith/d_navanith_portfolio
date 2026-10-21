@@ -4,12 +4,319 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initVaporizeSplashScreen();
   initScrollProgress();
   initCustomCursor();
   initScrollReveal();
   initNavScrollSpy();
   initModalListeners();
 });
+
+/* ---------------- 0. Vaporize Text Effect Splash Screen ---------------- */
+function initVaporizeSplashScreen() {
+  const splash = document.getElementById('splashScreen');
+  const canvas = document.getElementById('splashCanvas');
+  const skipBtn = document.getElementById('skipSplashBtn');
+  if (!splash || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const texts = ["Dinitha Navanith", "UI/UX Designer", "Software Engineer"];
+  let currentTextIndex = 0;
+  let animationState = "fadingIn"; // "fadingIn" -> "waiting" -> "vaporizing"
+  let vaporizeProgress = 0;
+  let fadeOpacity = 0;
+  let particles = [];
+  let textBoundaries = { left: 0, right: 0, width: 0 };
+  let animationFrameId = null;
+  let isFinished = false;
+
+  const vaporizeDuration = 1600; // ms per text vaporization
+  const fadeInDuration = 600;    // ms per text fade in
+  const waitDuration = 350;      // ms pause before vaporizing
+  const spread = 5;
+  const direction = "left-to-right";
+
+  // Prevent background scrolling while splash is active
+  document.body.style.overflow = 'hidden';
+
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  function resizeCanvas() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    sampleCurrentText();
+  }
+
+  function getFontSize() {
+    const w = window.innerWidth;
+    if (w < 480) return Math.floor(w / 11);
+    if (w < 768) return Math.floor(w / 13);
+    if (w < 1200) return 56;
+    return 66;
+  }
+
+  function updateDots(idx) {
+    for (let i = 0; i < texts.length; i++) {
+      const dot = document.getElementById(`dot${i}`);
+      if (dot) {
+        if (i === idx) dot.classList.add('active');
+        else dot.classList.remove('active');
+      }
+    }
+  }
+
+  function sampleCurrentText() {
+    const currentText = texts[currentTextIndex];
+    if (!currentText) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const fontSize = getFontSize();
+    const font = `700 ${fontSize * dpr}px 'Plus Jakarta Sans', sans-serif`;
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = font;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    const textX = canvas.width / 2;
+    const textY = canvas.height / 2;
+    const metrics = ctx.measureText(currentText);
+    const textWidth = metrics.width;
+    const textLeft = textX - textWidth / 2;
+
+    textBoundaries = {
+      left: textLeft,
+      right: textLeft + textWidth,
+      width: textWidth
+    };
+
+    ctx.fillText(currentText, textX, textY);
+
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    particles = [];
+
+    const sampleRate = Math.max(1, Math.round(dpr * 1.2));
+
+    for (let y = 0; y < canvas.height; y += sampleRate) {
+      for (let x = 0; x < canvas.width; x += sampleRate) {
+        const index = (y * canvas.width + x) * 4;
+        const alpha = data[index + 3];
+        if (alpha > 0) {
+          const originalAlpha = (alpha / 255) * 0.95;
+          particles.push({
+            x,
+            y,
+            originalX: x,
+            originalY: y,
+            color: `rgba(${data[index]}, ${data[index + 1]}, ${data[index + 2]}, ${originalAlpha})`,
+            opacity: 0,
+            originalAlpha,
+            velocityX: 0,
+            velocityY: 0,
+            angle: 0,
+            speed: 0,
+            shouldFadeQuickly: Math.random() > 0.8
+          });
+        }
+      }
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  function calculateSpread(fontSize) {
+    if (fontSize <= 20) return 0.2;
+    if (fontSize >= 100) return 1.5;
+    return 0.5 + (fontSize - 50) * 0.02;
+  }
+
+  function updateParticles(deltaTime) {
+    let allVaporized = true;
+    const fontSize = getFontSize();
+    const multipliedSpread = calculateSpread(fontSize) * spread;
+    const progress = Math.min(100, vaporizeProgress);
+
+    const vaporizeX = direction === "left-to-right"
+      ? textBoundaries.left + (textBoundaries.width * progress) / 100
+      : textBoundaries.right - (textBoundaries.width * progress) / 100;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      const shouldVaporize = direction === "left-to-right"
+        ? p.originalX <= vaporizeX
+        : p.originalX >= vaporizeX;
+
+      if (shouldVaporize) {
+        if (p.speed === 0) {
+          p.angle = Math.random() * Math.PI * 2;
+          p.speed = (Math.random() * 1.2 + 0.5) * multipliedSpread;
+          p.velocityX = Math.cos(p.angle) * p.speed;
+          p.velocityY = Math.sin(p.angle) * p.speed;
+        }
+
+        if (p.shouldFadeQuickly) {
+          p.opacity = Math.max(0, p.opacity - deltaTime * 1.5);
+        } else {
+          const dx = p.originalX - p.x;
+          const dy = p.originalY - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const damping = Math.max(0.95, 1 - dist / (120 * multipliedSpread));
+          const randomSpread = multipliedSpread * 3;
+          const sx = (Math.random() - 0.5) * randomSpread;
+          const sy = (Math.random() - 0.5) * randomSpread;
+
+          p.velocityX = (p.velocityX + sx + dx * 0.002) * damping;
+          p.velocityY = (p.velocityY + sy + dy * 0.002) * damping;
+
+          p.x += p.velocityX * deltaTime * 24;
+          p.y += p.velocityY * deltaTime * 14;
+
+          const fadeRate = 0.3 * (2000 / vaporizeDuration);
+          p.opacity = Math.max(0, p.opacity - deltaTime * fadeRate);
+        }
+
+        if (p.opacity > 0.01) {
+          allVaporized = false;
+        }
+      } else {
+        allVaporized = false;
+      }
+    }
+
+    return allVaporized;
+  }
+
+  function renderParticles() {
+    ctx.save();
+    ctx.scale(dpr, dpr);
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      if (p.opacity > 0) {
+        const c = p.color.replace(/[\d.]+\)$/, `${p.opacity})`);
+        ctx.fillStyle = c;
+        ctx.fillRect(p.x / dpr, p.y / dpr, 1.2, 1.2);
+      }
+    }
+    ctx.restore();
+  }
+
+  function finishSplash() {
+    if (isFinished) return;
+    isFinished = true;
+
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
+
+    splash.classList.add('splash-hidden');
+    document.body.style.overflow = '';
+
+    setTimeout(() => {
+      splash.style.display = 'none';
+    }, 900);
+  }
+
+  let lastTime = performance.now();
+
+  function animate(now) {
+    if (isFinished) return;
+
+    const deltaTime = Math.min((now - lastTime) / 1000, 0.1);
+    lastTime = now;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    switch (animationState) {
+      case "fadingIn": {
+        fadeOpacity += (deltaTime * 1000) / fadeInDuration;
+        const currentOpacity = Math.min(1, fadeOpacity);
+
+        ctx.save();
+        ctx.scale(dpr, dpr);
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x = p.originalX;
+          p.y = p.originalY;
+          p.opacity = currentOpacity * p.originalAlpha;
+          const c = p.color.replace(/[\d.]+\)$/, `${p.opacity})`);
+          ctx.fillStyle = c;
+          ctx.fillRect(p.x / dpr, p.y / dpr, 1.2, 1.2);
+        }
+        ctx.restore();
+
+        if (fadeOpacity >= 1) {
+          animationState = "waiting";
+          setTimeout(() => {
+            if (isFinished) return;
+            animationState = "vaporizing";
+            vaporizeProgress = 0;
+          }, waitDuration);
+        }
+        break;
+      }
+
+      case "waiting": {
+        renderParticles();
+        break;
+      }
+
+      case "vaporizing": {
+        vaporizeProgress += (deltaTime * 100) / (vaporizeDuration / 1000);
+        const allVaporized = updateParticles(deltaTime);
+        renderParticles();
+
+        if (vaporizeProgress >= 100 && allVaporized) {
+          currentTextIndex++;
+          if (currentTextIndex >= texts.length) {
+            finishSplash();
+            return;
+          } else {
+            updateDots(currentTextIndex);
+            sampleCurrentText();
+            animationState = "fadingIn";
+            fadeOpacity = 0;
+          }
+        }
+        break;
+      }
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  // Bind Events
+  if (skipBtn) {
+    skipBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      finishSplash();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !isFinished) {
+      finishSplash();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (!isFinished) {
+      resizeCanvas();
+    }
+  });
+
+  // Start sequence
+  updateDots(0);
+  resizeCanvas();
+  animationFrameId = requestAnimationFrame(animate);
+}
 
 /* ---------------- 1. Top Scroll Progress Beam ---------------- */
 function initScrollProgress() {
