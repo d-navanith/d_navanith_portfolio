@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initVaporizeSplashScreen();
+  initHeroPoseSwitcher();
   initLifecycleShowcase();
   initJourneyTimeline();
   initScrollProgress();
@@ -347,6 +348,36 @@ function initVaporizeSplashScreen() {
   updateDots(0);
   resizeCanvas();
   animationFrameId = requestAnimationFrame(animate);
+}
+
+/* ---------------- 1. Interactive Hero Portrait Pose Switcher ---------------- */
+function initHeroPoseSwitcher() {
+  const img = document.getElementById('heroPortraitImg');
+  const btns = document.querySelectorAll('.pose-btn');
+  if (!img || !btns.length) return;
+
+  const poseImages = {
+    chair: 'assets/dinitha-chair-cutout.png',
+    laptop: 'assets/dinitha-laptop-thinking.png'
+  };
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pose = btn.getAttribute('data-pose');
+      if (!pose || !poseImages[pose] || btn.classList.contains('active')) return;
+
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      img.classList.add('switching');
+      setTimeout(() => {
+        img.src = poseImages[pose];
+        img.onload = () => {
+          img.classList.remove('switching');
+        };
+      }, 180);
+    });
+  });
 }
 
 /* ---------------- 1.5 LangChain-Style Lifecycle Showcase Animation ---------------- */
