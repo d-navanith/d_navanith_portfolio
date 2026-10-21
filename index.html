@@ -154,19 +154,48 @@
         <div class="hero-stage-center reveal-on-scroll is-revealed">
           <div class="hero-portrait-stage">
             <div class="hero-portrait-backdrop"></div>
-            <img id="heroPortraitImg" src="assets/dinitha-chair-cutout.png" alt="Dinitha Navanith — UI/UX Designer & Developer" class="hero-cutout-img">
             
-            <!-- Quick Pose Switcher Pills -->
-            <div class="hero-pose-switcher" aria-label="Portrait Style Switcher">
-              <button class="pose-btn active" data-pose="chair" title="Seated Pose">
-                <i class="fa-solid fa-chair"></i>
-                <span>Seated</span>
+            <!-- Floating Style & Pose Selector (Bitrix24 Glass Dropdown) -->
+            <div class="portrait-dropdown-wrapper" id="portraitDropdownWrap">
+              <button class="portrait-dropdown-trigger" id="portraitDropdownBtn" aria-haspopup="listbox" aria-expanded="false" title="Switch portrait pose">
+                <span class="dropdown-trigger-icon"><i class="fa-solid fa-palette"></i></span>
+                <span class="dropdown-trigger-label" id="currentPoseLabel">Seated Studio</span>
+                <i class="fa-solid fa-chevron-down dropdown-trigger-chevron"></i>
               </button>
-              <button class="pose-btn" data-pose="laptop" title="Laptop Thinking Pose">
-                <i class="fa-solid fa-laptop-code"></i>
-                <span>Laptop</span>
-              </button>
+
+              <!-- Floating Glass Dropdown Menu -->
+              <div class="portrait-dropdown-menu" id="portraitDropdownMenu" role="listbox" aria-label="Portrait Style Options">
+                <div class="dropdown-menu-header">
+                  <span class="menu-header-title">PORTRAIT STYLE</span>
+                  <span class="menu-header-badge">4 STYLES</span>
+                </div>
+                
+                <ul class="dropdown-menu-list">
+                  <li class="dropdown-item is-selected" role="option" aria-selected="true" data-pose="chair" data-label="Seated Studio">
+                    <span class="item-orb orb-chair"></span>
+                    <span class="item-label">Seated Studio</span>
+                    <i class="fa-solid fa-check item-check"></i>
+                  </li>
+                  <li class="dropdown-item" role="option" aria-selected="false" data-pose="laptop" data-label="Focused Thinking">
+                    <span class="item-orb orb-laptop"></span>
+                    <span class="item-label">Focused Thinking</span>
+                    <i class="fa-solid fa-check item-check"></i>
+                  </li>
+                  <li class="dropdown-item" role="option" aria-selected="false" data-pose="standing" data-label="Standing Original">
+                    <span class="item-orb orb-standing"></span>
+                    <span class="item-label">Standing Original</span>
+                    <i class="fa-solid fa-check item-check"></i>
+                  </li>
+                  <li class="dropdown-item" role="option" aria-selected="false" data-pose="mascot" data-label="Vector Mascot">
+                    <span class="item-orb orb-mascot"></span>
+                    <span class="item-label">Vector Mascot</span>
+                    <i class="fa-solid fa-check item-check"></i>
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            <img id="heroPortraitImg" src="assets/dinitha-chair-cutout.png" alt="Dinitha Navanith — UI/UX Designer & Developer" class="hero-cutout-img">
           </div>
         </div>
 

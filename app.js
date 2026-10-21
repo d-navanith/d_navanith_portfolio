@@ -350,25 +350,63 @@ function initVaporizeSplashScreen() {
   animationFrameId = requestAnimationFrame(animate);
 }
 
-/* ---------------- 1. Interactive Hero Portrait Pose Switcher ---------------- */
+/* ---------------- 1. Interactive Hero Portrait Pose Switcher (Bitrix24 Glass Dropdown) ---------------- */
 function initHeroPoseSwitcher() {
+  const wrap = document.getElementById('portraitDropdownWrap');
+  const btn = document.getElementById('portraitDropdownBtn');
+  const menu = document.getElementById('portraitDropdownMenu');
+  const label = document.getElementById('currentPoseLabel');
   const img = document.getElementById('heroPortraitImg');
-  const btns = document.querySelectorAll('.pose-btn');
-  if (!img || !btns.length) return;
+  const items = document.querySelectorAll('.dropdown-item');
+
+  if (!wrap || !btn || !menu || !img) return;
 
   const poseImages = {
     chair: 'assets/dinitha-chair-cutout.png',
-    laptop: 'assets/dinitha-laptop-thinking.png'
+    laptop: 'assets/dinitha-laptop-thinking.png',
+    standing: 'assets/dinitha-hero-cutout.png',
+    mascot: 'assets/dinitha-mascot-vector.png'
   };
 
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const pose = btn.getAttribute('data-pose');
-      if (!pose || !poseImages[pose] || btn.classList.contains('active')) return;
+  // Toggle Dropdown
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = wrap.classList.contains('is-open');
+    if (isOpen) {
+      wrap.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      wrap.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
 
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  // Select Item
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const pose = item.getAttribute('data-pose');
+      const poseLabel = item.getAttribute('data-label') || item.textContent.trim();
 
+      if (!pose || !poseImages[pose]) return;
+
+      // Update active selection UI (high contrast electric blue)
+      items.forEach(i => {
+        i.classList.remove('is-selected');
+        i.setAttribute('aria-selected', 'false');
+      });
+      item.classList.add('is-selected');
+      item.setAttribute('aria-selected', 'true');
+
+      if (label) {
+        label.textContent = poseLabel;
+      }
+
+      // Close dropdown
+      wrap.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+
+      // Crossfade image
       img.classList.add('switching');
       setTimeout(() => {
         img.src = poseImages[pose];
@@ -377,6 +415,22 @@ function initHeroPoseSwitcher() {
         };
       }, 180);
     });
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target)) {
+      wrap.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close dropdown on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && wrap.classList.contains('is-open')) {
+      wrap.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
