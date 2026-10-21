@@ -2300,6 +2300,45 @@ body.has-scroll-sections .section.has-been-viewed {
   filter: blur(0);
 }
 
+/* Hero stage section is always crisp, clear, and visible after splash */
+body.has-scroll-sections #hero.section,
+#hero.section {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+#hero .hero-stage-left,
+#hero .hero-stage-center,
+#hero .hero-stage-right {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered entrance when splash finishes */
+body.splash-dismissed #hero .hero-stage-left {
+  animation: heroStageEntrance 0.75s 0.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body.splash-dismissed #hero .hero-stage-center {
+  animation: heroStageEntrance 0.8s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body.splash-dismissed #hero .hero-stage-right {
+  animation: heroStageEntrance 0.85s 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroStageEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* Internal child staggered reveals within active section */
 body.has-scroll-sections .section.is-section-active .section-tag-heading,
 body.has-scroll-sections .section.is-section-active .display-heading {

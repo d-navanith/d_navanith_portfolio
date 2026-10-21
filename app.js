@@ -34,9 +34,9 @@ function initVaporizeSplashScreen() {
   let animationFrameId = null;
   let isFinished = false;
 
-  const vaporizeDuration = 1600; // ms per text vaporization
-  const fadeInDuration = 600;    // ms per text fade in
-  const waitDuration = 350;      // ms pause before vaporizing
+  const vaporizeDuration = 1100; // ms per text vaporization (snappy & dynamic)
+  const fadeInDuration = 450;    // ms per text fade in
+  const waitDuration = 300;      // ms pause before vaporizing
   const spread = 5;
   const direction = "left-to-right";
 
@@ -218,12 +218,36 @@ function initVaporizeSplashScreen() {
       animationFrameId = null;
     }
 
+    // Dismiss splash overlay
     splash.classList.add('splash-hidden');
     document.body.style.overflow = '';
+    document.body.classList.add('splash-dismissed');
+
+    // Reset scroll smoothly to top so Hero section is front and center
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Explicitly activate and reveal Hero section elements
+    const heroSec = document.getElementById('hero');
+    if (heroSec) {
+      heroSec.classList.add('is-section-active', 'has-been-viewed');
+      heroSec.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        el.classList.add('is-revealed');
+      });
+    }
+
+    // Sync floating side rail dots & header navigation
+    document.querySelectorAll('.rail-dot').forEach(d => {
+      if (d.getAttribute('data-section') === 'hero') d.classList.add('is-active');
+      else d.classList.remove('is-active');
+    });
+    document.querySelectorAll('.pill-nav .nav-link').forEach(link => {
+      if (link.getAttribute('href') === '#hero') link.classList.add('active');
+      else link.classList.remove('active');
+    });
 
     setTimeout(() => {
       splash.style.display = 'none';
-    }, 900);
+    }, 850);
   }
 
   let lastTime = performance.now();
@@ -275,7 +299,8 @@ function initVaporizeSplashScreen() {
         const allVaporized = updateParticles(deltaTime);
         renderParticles();
 
-        if (vaporizeProgress >= 100 && allVaporized) {
+        // Advance when vaporized or if reached completion threshold
+        if (vaporizeProgress >= 100 && (allVaporized || vaporizeProgress >= 115)) {
           currentTextIndex++;
           if (currentTextIndex >= texts.length) {
             finishSplash();
@@ -294,7 +319,7 @@ function initVaporizeSplashScreen() {
     animationFrameId = requestAnimationFrame(animate);
   }
 
-  // Bind Events
+  // Bind Events: Skip button or clicking anywhere on splash dismisses it
   if (skipBtn) {
     skipBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -302,8 +327,12 @@ function initVaporizeSplashScreen() {
     });
   }
 
+  splash.addEventListener('click', () => {
+    finishSplash();
+  });
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !isFinished) {
+    if (!isFinished && (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter')) {
       finishSplash();
     }
   });
@@ -640,24 +669,35 @@ function initSectionScrollReveal() {
     const scrollPos = window.scrollY + 220;
     let currentId = null;
 
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
+    if (window.scrollY < 180) {
+      currentId = 'hero';
+      sections.forEach(sec => {
+        if (sec.getAttribute('id') === 'hero') {
+          sec.classList.add('is-section-active', 'has-been-viewed');
+        } else {
+          sec.classList.remove('is-section-active');
+        }
+      });
+    } else {
+      sections.forEach(sec => {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
 
-      // Check if section is within active viewport range
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = id;
-        sec.classList.add('is-section-active', 'has-been-viewed');
-      } else {
-        sec.classList.remove('is-section-active');
-      }
+        // Check if section is within active viewport range
+        if (scrollPos >= top && scrollPos < top + height) {
+          currentId = id;
+          sec.classList.add('is-section-active', 'has-been-viewed');
+        } else {
+          sec.classList.remove('is-section-active');
+        }
 
-      // Check if section is entering viewport for initial reveal
-      if (window.scrollY + window.innerHeight > top + 100) {
-        sec.classList.add('has-been-viewed');
-      }
-    });
+        // Check if section is entering viewport for initial reveal
+        if (window.scrollY + window.innerHeight > top + 100) {
+          sec.classList.add('has-been-viewed');
+        }
+      });
+    }
 
     if (currentId) {
       // Sync floating rail dots
