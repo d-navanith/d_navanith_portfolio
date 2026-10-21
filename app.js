@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initVaporizeSplashScreen();
+  initLifecycleShowcase();
   initScrollProgress();
   initCustomCursor();
   initScrollReveal();
@@ -316,6 +317,136 @@ function initVaporizeSplashScreen() {
   updateDots(0);
   resizeCanvas();
   animationFrameId = requestAnimationFrame(animate);
+}
+
+/* ---------------- 1.5 LangChain-Style Lifecycle Showcase Animation ---------------- */
+function initLifecycleShowcase() {
+  const container = document.getElementById('lifecycleShowcase');
+  const wheel = document.getElementById('lifecycleWheel');
+  const coreStepBadge = document.getElementById('wheelActiveStep');
+  const connector = document.getElementById('lifecycleConnector');
+  const progressFill = document.getElementById('lifecycleProgressFill');
+  const statusLabel = document.getElementById('lifecycleStatusLabel');
+  const prevBtn = document.getElementById('lifecyclePrevBtn');
+  const nextBtn = document.getElementById('lifecycleNextBtn');
+  
+  if (!container || !wheel) return;
+
+  const tabBtns = container.querySelectorAll('.lifecycle-tab-btn');
+  const wheelNodes = container.querySelectorAll('.wheel-node');
+  const panels = container.querySelectorAll('.lifecycle-panel');
+
+  const totalStages = 3;
+  let currentStage = 0;
+  let isPaused = false;
+  let timerProgress = 0;
+  const stageDuration = 5000; // 5 seconds per stage
+  const intervalStep = 50; // update progress every 50ms
+  let autoPlayTimer = null;
+
+  function setStage(index, userInitiated = false) {
+    currentStage = (index + totalStages) % totalStages;
+
+    // Calculate rotation angle (0deg, -120deg, -240deg)
+    const targetAngle = currentStage * 120;
+    wheel.style.setProperty('--wheel-rot', `-${targetAngle}deg`);
+
+    // Pulse the connector
+    if (connector) {
+      connector.style.animation = 'none';
+      void connector.offsetWidth; // trigger reflow
+      connector.style.animation = 'connectorPulse 1.8s infinite ease-in-out';
+    }
+
+    // Update central core badge
+    if (coreStepBadge) {
+      coreStepBadge.textContent = String(currentStage + 1).padStart(2, '0');
+    }
+
+    // Update tabs
+    tabBtns.forEach((btn, idx) => {
+      btn.classList.toggle('is-active', idx === currentStage);
+    });
+
+    // Update wheel nodes
+    wheelNodes.forEach((node, idx) => {
+      node.classList.toggle('is-active', idx === currentStage);
+    });
+
+    // Update panels
+    panels.forEach((panel, idx) => {
+      panel.classList.toggle('is-active', idx === currentStage);
+    });
+
+    // Reset progress bar
+    timerProgress = 0;
+    if (progressFill) progressFill.style.width = '0%';
+
+    if (userInitiated && statusLabel) {
+      statusLabel.textContent = `Stage ${currentStage + 1} of ${totalStages} active • Hover to pause`;
+    }
+  }
+
+  function startTimer() {
+    if (autoPlayTimer) clearInterval(autoPlayTimer);
+    autoPlayTimer = setInterval(() => {
+      if (isPaused) return;
+
+      timerProgress += (intervalStep / stageDuration) * 100;
+      if (progressFill) {
+        progressFill.style.width = `${Math.min(100, timerProgress)}%`;
+      }
+
+      if (timerProgress >= 100) {
+        timerProgress = 0;
+        setStage(currentStage + 1);
+      }
+    }, intervalStep);
+  }
+
+  // Wire Tab Buttons
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const stageIdx = parseInt(btn.getAttribute('data-stage'), 10);
+      setStage(stageIdx, true);
+    });
+  });
+
+  // Wire Wheel Nodes
+  wheelNodes.forEach((node) => {
+    node.addEventListener('click', () => {
+      const stageIdx = parseInt(node.getAttribute('data-stage'), 10);
+      setStage(stageIdx, true);
+    });
+  });
+
+  // Wire Arrow Controls
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      setStage(currentStage - 1, true);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      setStage(currentStage + 1, true);
+    });
+  }
+
+  // Hover Pause & Resume
+  container.addEventListener('mouseenter', () => {
+    isPaused = true;
+    if (statusLabel) statusLabel.textContent = 'Paused • Move mouse away to resume';
+  });
+
+  container.addEventListener('mouseleave', () => {
+    isPaused = false;
+    if (statusLabel) statusLabel.textContent = 'Auto-playing • Click or hover to pause';
+  });
+
+  // Initial stage setup
+  setStage(0);
+  startTimer();
 }
 
 /* ---------------- 1. Top Scroll Progress Beam ---------------- */

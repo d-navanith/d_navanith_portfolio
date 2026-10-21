@@ -156,30 +156,233 @@
               I’m a UI/UX designer and developer who enjoys turning complex ideas into simple, useful digital experiences. I care about how things look, but more importantly, how they work.
             </p>
 
-            <!-- 3-Step Flow: 01 Understand, 02 Simplify, 03 Build -->
-            <div class="steps-flow-container">
+            <!-- ==================== LANGCHAIN-INSPIRED LIFECYCLE ANIMATION ==================== -->
+            <div class="lifecycle-showcase-container reveal-on-scroll" id="lifecycleShowcase">
               
-              <div class="step-flow-item">
-                <span class="step-number">01</span>
-                <div class="step-content">
-                  <h3 class="step-title">Understand</h3>
-                  <p class="step-desc">I start by understanding the people, problem and context behind a product.</p>
-                </div>
+              <!-- Top Pill Tabs (LangChain Style) -->
+              <div class="lifecycle-nav-tabs">
+                <button class="lifecycle-tab-btn is-active" data-stage="0">
+                  <span class="tab-step">01</span>
+                  <span class="tab-title">Understand</span>
+                  <span class="tab-indicator"></span>
+                </button>
+                <button class="lifecycle-tab-btn" data-stage="1">
+                  <span class="tab-step">02</span>
+                  <span class="tab-title">Simplify</span>
+                  <span class="tab-indicator"></span>
+                </button>
+                <button class="lifecycle-tab-btn" data-stage="2">
+                  <span class="tab-step">03</span>
+                  <span class="tab-title">Build</span>
+                  <span class="tab-indicator"></span>
+                </button>
               </div>
 
-              <div class="step-flow-item">
-                <span class="step-number">02</span>
-                <div class="step-content">
-                  <h3 class="step-title">Simplify</h3>
-                  <p class="step-desc">I remove the unnecessary and focus on what makes the experience clearer.</p>
+              <!-- Main Interactive Arena: Rotating Wheel (Left) + Stage Panels (Right) -->
+              <div class="lifecycle-arena">
+                
+                <!-- Rotating Wheel Wrap -->
+                <div class="lifecycle-wheel-wrap">
+                  
+                  <!-- Animated Luminous Connector Line -->
+                  <div class="lifecycle-connector" id="lifecycleConnector">
+                    <svg viewBox="0 0 160 80" fill="none" class="connector-svg">
+                      <path d="M 10 40 Q 80 15 150 40" stroke="url(#connectorGlow)" stroke-width="2.5" stroke-linecap="round" />
+                      <circle cx="150" cy="40" r="4" fill="#2563eb" class="connector-pulse-dot" />
+                      <defs>
+                        <linearGradient id="connectorGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2" />
+                          <stop offset="50%" stop-color="#2563eb" stop-opacity="1" />
+                          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+
+                  <!-- Central Rotating Orbital Wheel -->
+                  <div class="lifecycle-wheel" id="lifecycleWheel">
+                    
+                    <!-- Center Core -->
+                    <div class="wheel-center-core">
+                      <span class="core-step-badge" id="wheelActiveStep">01</span>
+                      <span class="core-step-total">/ 03</span>
+                      <div class="core-pulse-ring"></div>
+                    </div>
+
+                    <!-- Stage 01 Node -->
+                    <button class="wheel-node is-active" data-stage="0" aria-label="Stage 01: Understand" style="--node-angle: 0deg;">
+                      <div class="node-pill">
+                        <span class="node-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <div class="node-text">
+                          <span class="node-num">01</span>
+                          <span class="node-name">Understand</span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <!-- Stage 02 Node -->
+                    <button class="wheel-node" data-stage="1" aria-label="Stage 02: Simplify" style="--node-angle: 120deg;">
+                      <div class="node-pill">
+                        <span class="node-icon"><i class="fa-solid fa-filter"></i></span>
+                        <div class="node-text">
+                          <span class="node-num">02</span>
+                          <span class="node-name">Simplify</span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <!-- Stage 03 Node -->
+                    <button class="wheel-node" data-stage="2" aria-label="Stage 03: Build" style="--node-angle: 240deg;">
+                      <div class="node-pill">
+                        <span class="node-icon"><i class="fa-solid fa-cube"></i></span>
+                        <div class="node-text">
+                          <span class="node-num">03</span>
+                          <span class="node-name">Build</span>
+                        </div>
+                      </div>
+                    </button>
+
+                  </div>
                 </div>
+
+                <!-- Active Stage Panels Display (Right) -->
+                <div class="lifecycle-panels-stack">
+                  
+                  <!-- Panel 01: Understand -->
+                  <article class="lifecycle-panel is-active" data-panel="0">
+                    <div class="panel-header">
+                      <div class="panel-badge">PHASE 01 • DISCOVERY</div>
+                      <h3 class="panel-title">Understand</h3>
+                      <p class="panel-lead">I start by understanding the people, problem and context behind a product.</p>
+                    </div>
+
+                    <div class="panel-features-grid">
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-users-viewfinder"></i></div>
+                        <div>
+                          <strong>User Research & Empathy</strong>
+                          <span>Listening to real user frustrations and observing workflows before drawing a single pixel.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-crosshairs"></i></div>
+                        <div>
+                          <strong>Problem & Value Framing</strong>
+                          <span>Separating symptoms from root causes to define clear product objectives and measurable outcomes.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <div>
+                          <strong>Context & Technical Scope</strong>
+                          <span>Mapping business models, technical realities, and user environments into a cohesive roadmap.</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel-visual-chip">
+                      <span class="visual-chip-tag"><i class="fa-solid fa-lightbulb text-blue"></i> Core Philosophy</span>
+                      <p>"Designing without understanding is just guessing. Clarity begins with asking the right questions."</p>
+                    </div>
+                  </article>
+
+                  <!-- Panel 02: Simplify -->
+                  <article class="lifecycle-panel" data-panel="1">
+                    <div class="panel-header">
+                      <div class="panel-badge">PHASE 02 • ARCHITECTURE</div>
+                      <h3 class="panel-title">Simplify</h3>
+                      <p class="panel-lead">I remove the unnecessary and focus on what makes the experience clearer.</p>
+                    </div>
+
+                    <div class="panel-features-grid">
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-broom"></i></div>
+                        <div>
+                          <strong>Cognitive Load Reduction</strong>
+                          <span>Removing visual distractions, unnecessary steps, and cognitive clutter so users focus on what matters.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div>
+                          <strong>Intuitive Hierarchy & Navigation</strong>
+                          <span>Structuring typography, spatial layout, and contrast so screens communicate instantly.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                          <strong>Frictionless Workflows</strong>
+                          <span>Condensing complex 7-step legacy procedures into effortless, natural user flows.</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel-visual-chip">
+                      <span class="visual-chip-tag"><i class="fa-solid fa-sparkles text-blue"></i> Core Philosophy</span>
+                      <p>"Simplicity isn’t the lack of clutter, that’s simply a consequence. Simplicity is making things effortlessly clear."</p>
+                    </div>
+                  </article>
+
+                  <!-- Panel 03: Build -->
+                  <article class="lifecycle-panel" data-panel="2">
+                    <div class="panel-header">
+                      <div class="panel-badge">PHASE 03 • EXECUTION</div>
+                      <h3 class="panel-title">Build</h3>
+                      <p class="panel-lead">I bring ideas to life through thoughtful design and code.</p>
+                    </div>
+
+                    <div class="panel-features-grid">
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
+                        <div>
+                          <strong>Figma Component Architecture</strong>
+                          <span>Building scalable design systems, auto-layout variants, and high-fidelity clickable prototypes.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                          <strong>Modern Frontend Engineering</strong>
+                          <span>Translating visual fidelity into clean, responsive React, HTML5, CSS3, and Node.js code.</span>
+                        </div>
+                      </div>
+
+                      <div class="panel-feat-item">
+                        <div class="feat-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                          <strong>Zero-Handoff Harmony</strong>
+                          <span>Designing with code awareness so components behave reliably across all screen sizes and devices.</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel-visual-chip">
+                      <span class="visual-chip-tag"><i class="fa-solid fa-circle-check text-blue"></i> Core Philosophy</span>
+                      <p>"Good design makes things easier to understand. Good development makes them real. I enjoy doing both."</p>
+                    </div>
+                  </article>
+
+                </div>
+
               </div>
 
-              <div class="step-flow-item">
-                <span class="step-number">03</span>
-                <div class="step-content">
-                  <h3 class="step-title">Build</h3>
-                  <p class="step-desc">I bring ideas to life through thoughtful design and code.</p>
+              <!-- Cycle Progress Footer -->
+              <div class="lifecycle-progress-footer">
+                <div class="progress-bar-track">
+                  <div class="progress-bar-fill" id="lifecycleProgressFill"></div>
+                </div>
+                <div class="progress-controls">
+                  <span class="progress-status-label" id="lifecycleStatusLabel">Auto-playing • Click or hover to pause</span>
+                  <div class="progress-arrows">
+                    <button class="lifecycle-nav-arrow" id="lifecyclePrevBtn" aria-label="Previous Phase"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="lifecycle-nav-arrow" id="lifecycleNextBtn" aria-label="Next Phase"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
                 </div>
               </div>
 
