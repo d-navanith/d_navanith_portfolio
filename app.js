@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
   initCustomCursor();
   initScrollReveal();
-  initNavScrollSpy();
+  initSectionScrollReveal();
   initModalListeners();
 });
 
@@ -602,31 +602,87 @@ function initScrollReveal() {
   revealElements.forEach(el => observer.observe(el));
 }
 
-/* ---------------- 4. Active Nav Item ScrollSpy ---------------- */
-function initNavScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.pill-nav .nav-link');
+/* ---------------- 4. Section-by-Section Scroll Reveal & Rail Sync (Dribbble-Style) ---------------- */
+function initSectionScrollReveal() {
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const railDots = Array.from(document.querySelectorAll('.rail-dot'));
+  const navLinks = Array.from(document.querySelectorAll('.pill-nav .nav-link'));
 
-  const onScroll = () => {
-    const scrollPos = window.scrollY + 180;
+  if (!sections.length) return;
+
+  // Mark body as supporting smooth section animations
+  document.body.classList.add('has-scroll-sections');
+
+  // Immediately activate hero section
+  if (sections[0]) {
+    sections[0].classList.add('is-section-active', 'has-been-viewed');
+  }
+
+  // Smooth scroll click handler for rail dots with exact offset
+  railDots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = dot.getAttribute('data-section');
+      const targetSec = document.getElementById(targetId);
+      if (targetSec) {
+        const headerOffset = 76;
+        const targetTop = targetSec.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Precise Scroll-based section spy & reveal
+  const updateActiveSection = () => {
+    const scrollPos = window.scrollY + 220;
+    let currentId = null;
 
     sections.forEach(sec => {
       const top = sec.offsetTop;
       const height = sec.offsetHeight;
       const id = sec.getAttribute('id');
 
+      // Check if section is within active viewport range
       if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
+        currentId = id;
+        sec.classList.add('is-section-active', 'has-been-viewed');
+      } else {
+        sec.classList.remove('is-section-active');
+      }
+
+      // Check if section is entering viewport for initial reveal
+      if (window.scrollY + window.innerHeight > top + 100) {
+        sec.classList.add('has-been-viewed');
       }
     });
+
+    if (currentId) {
+      // Sync floating rail dots
+      railDots.forEach(d => {
+        if (d.getAttribute('data-section') === currentId) {
+          d.classList.add('is-active');
+        } else {
+          d.classList.remove('is-active');
+        }
+      });
+
+      // Sync top navigation links
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
   };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  // Initial run
+  updateActiveSection();
 }
 
 /* ---------------- 5. Toggle "See all projects" Tray ---------------- */
